@@ -1,0 +1,21 @@
+{
+  "gui.as_gui.examplebutton": "Example Button",
+  "key.as_gui.opengui": "Open Armour Stand GUI",
+  "category.as_gui.keyBindings": "Armour Stand GUI",
+  "gui.as_gui.styles": "Styles",
+  "gui.as_gui.nudge": "Nudge",
+  "gui.as_gui.rotation": "Rotation",
+  "gui.as_gui.pointing": "Pointing",
+  "gui.as_gui.presets": "Presets",
+  "gui.as_gui.poseAdjust": "Pose Adjust",
+
+  "gui.as_gui.setting.yes": "Yes",
+  "gui.as_gui.setting.no": "No",
+
+  "gui.as_gui.styles.basePlate": "Show Base Plate",
+  "gui.as_gui.styles.showArms": "Show Arms",
+  "gui.as_gui.styles.smallStand": "Small Stand",
+  "gui.as_gui.styles.applyGravity": "Apply Gravity",
+  "gui.as_gui.styles.visible": "Stand Visible",
+  "gui.as_gui.styles.displayName": "Display Name"
+}
