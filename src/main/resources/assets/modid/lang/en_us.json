@@ -9,6 +9,7 @@
   "gui.as_gui.presets": "Presets",
   "gui.as_gui.poseAdjust": "Pose Adjust",
   "gui.as_gui.home": "Home",
+  "gui.as_gui.openBook": "Open Book",
 
   "gui.as_gui.setting.yes": "Yes",
   "gui.as_gui.setting.no": "No",
@@ -21,5 +22,7 @@
   "gui.as_gui.styles.displayName": "Display Name",
 
   "gui.as_gui.utilities.lock": "Lock Armour Stand",
-  "gui.as_gui.utilities.marker": "Marker"
+  "gui.as_gui.utilities.marker": "Marker",
+
+  "gui.as_gui.nudge.facing": "Facing"
 }

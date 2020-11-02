@@ -1,11 +1,9 @@
 package com.funnyboyroks.as_gui.gui;
 
-import com.funnyboyroks.as_gui.AS_Screen;
-import com.funnyboyroks.as_gui.ASFunctions;
+import com.funnyboyroks.as_gui.*;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.*;
-import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
-import io.github.cottonmc.cotton.gui.widget.data.VerticalAlignment;
+import io.github.cottonmc.cotton.gui.widget.data.*;
 import net.minecraft.text.TranslatableText;
 
 public class StyleGui extends LightweightGuiDescription{

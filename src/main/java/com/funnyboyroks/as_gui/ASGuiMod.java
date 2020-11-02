@@ -4,14 +4,19 @@ import com.funnyboyroks.as_gui.gui.MainGui;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.server.command.CommandManager;
 import net.minecraft.text.LiteralText;
 import org.lwjgl.glfw.GLFW;
 
+import java.util.List;
+
 public class ASGuiMod implements ModInitializer {
     private static KeyBinding keyBinding;
+
     @Override
     public void onInitialize() {
         // This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -26,7 +31,7 @@ public class ASGuiMod implements ModInitializer {
         ));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            if(keyBinding.wasPressed()){
+            if (keyBinding.wasPressed()) {
 //                System.out.println("mincraftClient class: " + minecraftClient.getClass());
                 MinecraftClient.getInstance().openScreen(new AS_Screen(new MainGui(client)));
                 client.player.sendMessage(new LiteralText("Opened GUI!"), false);
@@ -35,16 +40,17 @@ public class ASGuiMod implements ModInitializer {
         });
 
 //        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {
-//            dispatcher.register(CommandManager.literal("asgui")
-//                    .executes(context -> {
-//                        System.out.println("Called foo with bar");
-//                        MinecraftClient.getInstance().openScreen(new ExampleScreen(new ExampleGui(minecraftClient)));
+//            dispatcher.register(
+//                    CommandManager.literal("asgui")
+//                        .executes(context -> {
+//                            System.out.println("Called foo with bar");
+//                            System.out.println(context.getSource().getPlayer().getDisplayName().asString());
 //
-//                        return 1;
-//                    })
+//                            context.getSource().getPlayer().sendMessage(new LiteralText(String.format("Hello %s!", context.getSource().getPlayer().inventory.)), false);
+//                            return 1;
+//                        })
 //            );
 //        });
-
 
 
     }

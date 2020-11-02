@@ -48,7 +48,7 @@ public class ASFunctions {
         root.add(buttonYes, x+1, y+1, 2, 1);
         root.add(buttonNo , x+3, y+1, 2, 1);
     }
-    public static void rotationButtons(WGridPanel root, net.minecraft.client.MinecraftClient MinecraftClient, int x, int y){
+    public static void rotationButtons(WGridPanel root, net.minecraft.client.MinecraftClient MinecraftClient, int x, int y, int w){
         String[] degs = {"45", "15", "5", "1"};
         int[] vals    = {120 , 121 , 122, 123};
         for(int i = 0; i < degs.length; i++){
@@ -57,7 +57,7 @@ public class ASFunctions {
             b.setOnClick(() -> {
                 ASFunctions.as_trigger(vals[finalI], MinecraftClient);
             });
-            root.add(b, x + 2*i, y, 2, 1);
+            root.add(b, x + w*i, y, w, 1);
         }
     }
 }
