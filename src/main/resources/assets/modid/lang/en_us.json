@@ -8,6 +8,7 @@
   "gui.as_gui.pointing": "Pointing",
   "gui.as_gui.presets": "Presets",
   "gui.as_gui.poseAdjust": "Pose Adjust",
+  "gui.as_gui.home": "Home",
 
   "gui.as_gui.setting.yes": "Yes",
   "gui.as_gui.setting.no": "No",
@@ -17,5 +18,8 @@
   "gui.as_gui.styles.smallStand": "Small Stand",
   "gui.as_gui.styles.applyGravity": "Apply Gravity",
   "gui.as_gui.styles.visible": "Stand Visible",
-  "gui.as_gui.styles.displayName": "Display Name"
+  "gui.as_gui.styles.displayName": "Display Name",
+
+  "gui.as_gui.utilities.lock": "Lock Armour Stand",
+  "gui.as_gui.utilities.marker": "Marker"
 }

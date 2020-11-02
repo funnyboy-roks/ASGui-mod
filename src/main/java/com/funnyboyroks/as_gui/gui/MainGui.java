@@ -1,18 +1,14 @@
 package com.funnyboyroks.as_gui.gui;
 
 
+import com.funnyboyroks.as_gui.ASFunctions;
 import com.funnyboyroks.as_gui.AS_Screen;
-import com.funnyboyroks.as_gui.Functions;
 import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.*;
 import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
 import io.github.cottonmc.cotton.gui.widget.data.VerticalAlignment;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
-import net.minecraft.util.Identifier;
-
-import javax.swing.*;
 
 public class MainGui extends LightweightGuiDescription {
     public MainGui(net.minecraft.client.MinecraftClient MinecraftClient) {
@@ -27,13 +23,20 @@ public class MainGui extends LightweightGuiDescription {
         title.setVerticalAlignment(VerticalAlignment.TOP);
         root.add(title, 0, 0, 21, 1);
 
+        ASFunctions.addYesNoToggle("gui.as_gui.utilities.lock", root, MinecraftClient, 1000, 1001, 0, 11);
+        ASFunctions.addYesNoToggle("gui.as_gui.utilities.marker",
+                root,
+                MinecraftClient,
+                "/editarmourstand marker on",
+                "/editarmourstand marker off",
+                15,
+                11);
+
         WButton[] mainButtons = new WButton[6];
 
         mainButtons[0] = new WButton(new TranslatableText("gui.as_gui.styles"));
         mainButtons[0].setOnClick(() -> {
-            // TODO: Switch to styles GUI
-//            MinecraftClient.player.sendChatMessage("/say styles");
-//            Functions.trigger(10, MinecraftClient);
+            MinecraftClient.player.sendMessage(new TranslatableText("gui.as_gui.styles"), true);
             net.minecraft.client.MinecraftClient.getInstance().openScreen(new AS_Screen(new StyleGui(MinecraftClient)));
         });
 
@@ -67,14 +70,22 @@ public class MainGui extends LightweightGuiDescription {
             MinecraftClient.player.sendChatMessage("/say Pose Adjust");
         });
 
-
+        ASFunctions.rotationButtons(root, MinecraftClient, 11, 12);
 //        root.add(mainButtons[1], )
 //        root.add(mainButtons[0], 0, 3, 4, 1);
-        for(int i = 0; i < mainButtons.length; ++i){
+        for (int i = 0; i < mainButtons.length; ++i) {
             int x = i % 4;
             int y = i / 4;
-            root.add(mainButtons[i], 5*x + 1, 3 + y*3, 4, 1);
+            root.add(mainButtons[i], 5 * x + 1, 3 + y * 3, 4, 1);
         }
+
+
+//        for(int x = 0; x < 21; ++x){
+//            for(int y = 0; y < 13; ++y){
+//                WLabel p = new WLabel(new LiteralText(x + "," + y), 0);
+//                root.add(p, x, y, 1, 1);
+//            }
+//        }
 
         root.validate(this);
     }
