@@ -9,6 +9,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.server.command.CommandManager;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.LiteralText;
 import org.lwjgl.glfw.GLFW;
 
@@ -43,11 +44,13 @@ public class ASGuiMod implements ModInitializer {
 //            dispatcher.register(
 //                    CommandManager.literal("asgui")
 //                        .executes(context -> {
+//                            ServerPlayerEntity player = context.getSource().getPlayer();
 //                            System.out.println("Called foo with bar");
 //                            System.out.println(context.getSource().getPlayer().getDisplayName().asString());
-//
-//                            context.getSource().getPlayer().sendMessage(new LiteralText(String.format("Hello %s!", context.getSource().getPlayer().inventory.)), false);
+//                            player.teleport(player.getX() + 1, player.getY()+1, player.getZ()+1);
+//                            context.getSource().getPlayer().sendMessage(new LiteralText("NoClip Toggled! Now: " + player.canFly()), false);
 //                            return 1;
+//
 //                        })
 //            );
 //        });

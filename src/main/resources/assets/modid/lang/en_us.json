@@ -8,6 +8,12 @@
   "gui.as_gui.pointing": "Pointing",
   "gui.as_gui.presets": "Presets",
   "gui.as_gui.poseAdjust": "Pose Adjust",
+  "gui.as_gui.autoAlign":  "Auto Align",
+  "gui.as_gui.swapSlots": "Swap Slots",
+  "gui.as_gui.mirrorFlip":  "Mirror/Flip",
+  "gui.as_gui.utilities": "Utilities",
+  "gui.as_gui.itemFrames":  "Item Frames",
+  "gui.as_gui.credits": "Credits",
   "gui.as_gui.home": "Home",
   "gui.as_gui.openBook": "Open Book",
 

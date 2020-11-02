@@ -7,6 +7,8 @@ import io.github.cottonmc.cotton.gui.client.LightweightGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.*;
 import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
 import io.github.cottonmc.cotton.gui.widget.data.VerticalAlignment;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
 
@@ -73,6 +75,23 @@ public class MainGui extends LightweightGuiDescription {
             // TODO: Switch to Pose Adjust GUI
             MinecraftClient.player.sendChatMessage("/say Pose Adjust");
         });
+
+        mainButtons.add(new WButton(new TranslatableText("gui.as_gui.autoAlign")));
+
+        mainButtons.add(new WButton(new TranslatableText("gui.as_gui.swapSlots")));
+
+        mainButtons.add(new WButton(new TranslatableText("gui.as_gui.mirrorFlip")));
+
+        mainButtons.add(new WButton(new TranslatableText("gui.as_gui.utilities")));
+
+        mainButtons.add(new WButton(new TranslatableText("gui.as_gui.itemFrames")));
+
+        WButton credits = new WButton(new TranslatableText("gui.as_gui.credits"));
+        credits.setOnClick(() -> {
+            // TODO: Open Credits page in AS Book
+        });
+
+        root.add(credits, 18, 0, 3, 1);
 
         WButton openBook = new WButton(new TranslatableText("gui.as_gui.openBook"));
         openBook.setOnClick(() -> {
